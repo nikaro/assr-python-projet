@@ -50,7 +50,7 @@ $ tree NOM1_NOM2_NOM3
 ├── README.md           <- une petite documentation d'installation et d'utilisation, c'est toujours utile
 ├── requirements.txt    <- vos dépendances tierces, s'il y en a
 ├── script.py           <- votre script
-├── test_script.py      <- vos tests unitaires si vous un ou une Pythoniste chevronnée
+├── test_script.py      <- vos tests unitaires si vous êtes un ou une Pythoniste chevronnée
 └── users-database.csv  <- votre base de données
 ```
 
