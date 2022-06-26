@@ -51,7 +51,7 @@ def test_load_db_csv(tmpdir):
 def test_check_if_pwned(respx_mock):
     """Test that request results are correctly interpreted."""
 
-    api_url = "https://api.pwnedpasswords.com/range",
+    api_url = "https://api.pwnedpasswords.com/range"
     passwd = "76e4b28b5527652fd7af9a57e17f6adce5bbba78"
     prefix = passwd[:5]
     suffix = passwd[5:]
@@ -63,17 +63,15 @@ def test_check_if_pwned(respx_mock):
     assert results == 30
 
 
-def test_check_if_pwned_not_found(requests_mock):
+def test_check_if_pwned_not_found(respx_mock):
     """Test that request results are correctly interpreted if not found."""
 
-    api_url = "https://api.pwnedpasswords.com/range",
+    api_url = "https://api.pwnedpasswords.com/range"
     passwd = "76e4b28b5527652fd7af9a57e17f6adce5bbba78"
     prefix = passwd[:5]
-    requests_mock.get(
-        f"{api_url}/{prefix}",
-        text="",
-    )
+    route = respx_mock.get(f"{api_url}/{prefix}").respond(text="")
 
     results = script.check_if_pwned(api_url, passwd)
 
+    assert route.called
     assert results == 0
