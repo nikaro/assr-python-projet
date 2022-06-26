@@ -2,8 +2,6 @@
 
 from pathlib import Path
 
-from pytest_httpx import HTTPXMock
-
 import script
 
 
