@@ -2,7 +2,7 @@
 
 from pathlib import Path
 
-import requests
+import httpx
 
 
 def load_config(config_path: str = "") -> dict:

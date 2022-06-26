@@ -2,6 +2,8 @@
 
 from pathlib import Path
 
+from pytest_httpx import HTTPXMock
+
 import script
 
 
@@ -48,20 +50,18 @@ def test_load_db_csv(tmpdir):
     assert data[0]["password"] == "7c4a8d09ca3762af61e59520943dc26494f8941b"
 
 
-def test_check_if_pwned(requests_mock):
+def test_check_if_pwned(respx_mock):
     """Test that request results are correctly interpreted."""
 
     api_url = "https://api.pwnedpasswords.com/range",
     passwd = "76e4b28b5527652fd7af9a57e17f6adce5bbba78"
     prefix = passwd[:5]
     suffix = passwd[5:]
-    requests_mock.get(
-        f"{api_url}/{prefix}",
-        text=f"{suffix}:30\n",
-    )
+    route = respx_mock.get(f"{api_url}/{prefix}").respond(text=f"{suffix}:30\n")
 
     results = script.check_if_pwned(api_url, passwd)
 
+    assert route.called
     assert results == 30
 
 
