@@ -66,7 +66,9 @@ $ tree NOM1_NOM2_NOM3/
 ## Aide
 
 Google est votre ami ([ou pas](https://www.zdnet.com/finance/google-is-not-your-friend/)).
-Sinon vous pouvez également consulter le [wiki](/wiki) pour quelques astuces.
+Sinon vous pouvez également consulter le [wiki](https://github.com/nikaro/assr-python-projet/wiki)
+pour quelques astuces.
 
-En cas de blocage, posez vos questions dans [l'espace de discussions](/discussions)
+En cas de blocage, posez vos questions dans
+[l'espace de discussions](https://github.com/nikaro/assr-python-projet/discussions)
 afin que chacun puisse participer et que ça puisse profiter à tous.
