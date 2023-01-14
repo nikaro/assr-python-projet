@@ -1,5 +1,13 @@
 # Projet Python HIBP
 
+## Contexte
+
+L'objectif de ce projet est de mettre en pratique les connaissances en Python
+que vous avez acquise jusque là, avec une mise en situation qui se rapproche de
+ce que vous pourrez rencontrer dans un contexte professionnel.
+
+## Consignes
+
 Pour ce projet vous devrez vérifier que vos utilisateurs n'utilisent pas un mot
 de passe "corrompu" ("pwned"), pour cela vous avez à disposition une base de
 données (CSV ou SQLite au choix) avec un champ `login` et un champ `password`,
@@ -14,8 +22,7 @@ Votre script devra donc :
 - gérer les erreurs courantes possibles (fichier de BDD non trouvé, etc.)
 - être découpé en fonctions (une pour chaque partie essentielle du script)
 - être conforme au guide de style PEP8
-- bonus : utiliser des annotations de type
-- bonus+ : ajouter la possibilité de surcharger la configuration via des
+- bonus : ajouter la possibilité de surcharger la configuration via des
   paramètres de ligne de commande
 
 Si vous utilisez des bibliothèques tierces (non dans la stdlib), il faut les
@@ -35,20 +42,21 @@ nkarolak False          *
 ```
 
 Si vous souhaitez ajouter des utilisateurs à la base de données, la commande
-pour générer un hash sha1 est la suivante :
+pour générer un hash sha1 sous Linux est la suivante :
 
 ```
 echo -n 'mon mot de passe' | sha1sum
 ```
 
+## Rendu
+
 À rendre, un fichier ZIP (`NOM1_NOM2_NOM3.zip`) avec le contenu suivant :
 
 ```
-$ tree NOM1_NOM2_NOM3
+$ tree NOM1_NOM2_NOM3/
 ├── config.ini          <- votre fichier de configuration
 ├── README.md           <- une petite documentation d'installation et d'utilisation, c'est toujours utile
 ├── requirements.txt    <- vos dépendances tierces, s'il y en a
 ├── script.py           <- votre script
-├── test_script.py      <- vos tests unitaires si vous êtes un ou une Pythoniste chevronnée
 └── users-database.*    <- votre base de données
 ```
