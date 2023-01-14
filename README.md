@@ -60,3 +60,13 @@ $ tree NOM1_NOM2_NOM3/
 ├── script.py           <- votre script
 └── users-database.*    <- votre base de données
 ```
+
+À envoyer à l'adresse : [benefit_callow_01@icloud.com](mailto:benefit_callow_01@icloud.com)
+
+## Aide
+
+Google est votre ami ([ou pas](https://www.zdnet.com/finance/google-is-not-your-friend/)).
+Sinon vous pouvez également consulter le [wiki](/wiki) pour quelques astuces.
+
+En cas de blocage, posez vos questions dans [l'espace de discussions](/discussions)
+afin que chacun puisse participer et que ça puisse profiter à tous.
